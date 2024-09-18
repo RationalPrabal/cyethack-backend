@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const bcrypt = require("bcrypt"); // For password hashing
+const bcrypt = require("bcryptjs"); // For password hashing
 const { userModel } = require("../models/user.model");
 const authRouter = express.Router();
 
