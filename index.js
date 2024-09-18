@@ -14,7 +14,7 @@ app.use(cookieParser());
 // Enable CORS with credentials
 app.use(
   cors({
-    origin: "http://localhost:5173", // Replace with your frontend domain
+    origin: ["http://localhost:5173", "https://cyethack.vercel.app"],
     credentials: true, // Allow credentials (cookies) to be sent
   })
 );
