@@ -48,6 +48,8 @@ authRouter.post("/login", async (req, res) => {
     res.cookie("sessionId", email, {
       httpOnly: true,
       maxAge: 60 * 60 * 1000, // 1 hour
+      secure: process.env.NODE_ENV === "prod", // Only use 'true' in production
+      sameSite: "None", // Allow cookies to be sent cross-site
     });
 
     res.send({
